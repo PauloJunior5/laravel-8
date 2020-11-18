@@ -2,13 +2,12 @@
 @section('title', 'Index')
 @section('content')
     <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
+        <div class="col-lg-12 d-flex ">
+            <div class="mr-auto p-2">
                 <h2>Laravel 8 CRUD </h2>
             </div>
-            <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('projects.create') }}" title="Create a project"> <i class="fas fa-plus-circle"></i>
-                    </a>
+            <div class="p-2">
+                <a class="btn btn-success" href="{{ route('projects.create') }}" title="Create a project">NEW</a>
             </div>
         </div>
     </div>
@@ -21,7 +20,7 @@
 
     <table class="table table-bordered table-responsive-lg">
         <tr>
-            <th>No</th>
+            <th>Id</th>
             <th>Name</th>
             <th>Introduction</th>
             <th>Location</th>
@@ -31,11 +30,11 @@
         </tr>
         @foreach ($projects as $project)
             <tr>
-                <td>{{ ++$i }}</td>
+                <td>{{ $project->id }}</td>
                 <td>{{ $project->name }}</td>
                 <td>{{ $project->introduction }}</td>
                 <td>{{ $project->location }}</td>
-                <td>{{ $project->cost }}</td>
+                <td>{{ "US$" . $project->cost }}</td>
                 <td>{{ date_format($project->created_at, 'jS M Y') }}</td>
                 <td>
                     <form action="{{ route('projects.destroy', $project->id) }}" method="POST">
