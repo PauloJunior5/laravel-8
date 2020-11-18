@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
-class ProjectController extends Controller
+class ProjectsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -104,32 +104,4 @@ class ProjectController extends Controller
         return redirect()->route('projects.index')
             ->with('success', 'Project deleted successfully');
     }
-}
-
-Laravel 8 has created a folder called Models, which is not available in the previous version, so our project model is found in the app/Models/Project.php, add the following functions and the fillable, the fillable are the fields in the database that a user can fill.
-<?php
-
-namespace App\Models;
-
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-
-class Project extends Model
-{
-    use HasFactory;
-
-    protected $table = 'projects';
-    public $timestamps = true;
-
-    protected $casts = [
-        'cost' => 'float'
-    ];
-
-    protected $fillable = [
-        'name',
-        'introduction',
-        'created_at',
-        'location',
-        'cost'
-    ];
 }
