@@ -24,8 +24,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return view('dashboard');
     })->name('dashboard');
 
-    Route::resource('projects', ProjectsController::class)->names([
-        'index' => 'projects.home'
-    ]);
+    Route::resource('projects', ProjectsController::class);
 
 });
