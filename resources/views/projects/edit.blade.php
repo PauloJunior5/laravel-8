@@ -14,7 +14,7 @@
                         <h2>Edit Product</h2>
                     </div>
                     <div class="pull-right">
-                        <a class="btn btn-dark" href="{{ route('projects.index') }}" title="Cancel">Cancel</a>
+                        <a class="btn btn-dark" href="{{ route('projects.index') }}" title="Go Back">Go Back</a>
                     </div>
                 </div>
             </div>
@@ -62,10 +62,11 @@
                         <textarea class="form-control" style="height:50px" name="introduction" placeholder="Introduction" required>{{ $project->introduction }}</textarea>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="row">
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
                 </div>
-
             </form>
 
         </div>

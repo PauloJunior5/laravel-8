@@ -14,7 +14,7 @@
                         <h2>New Project</h2>
                     </div>
                     <div class="pull-right">
-                        <a class="btn btn-dark" href="{{ route('projects.index') }}" title="Cancel">Cancel</a>
+                        <a class="btn btn-dark" href="{{ route('projects.index') }}" title="Go Back">Go Back</a>
                     </div>
                 </div>
             </div>
