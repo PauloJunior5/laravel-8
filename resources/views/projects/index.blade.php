@@ -14,7 +14,7 @@
                         <h2>Projetcts List</h2>
                     </div>
                     <div class="p-2">
-                        <a class="btn btn-success" href="{{ route('projects.create') }}" title="Create a project">NEW</a>
+                        <a class="btn btn-dark" href="{{ route('projects.create') }}" title="Create a project">NEW</a>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,6 @@
             {!! $projects->links() !!}
 
         </div>
-
     </div>
 </div>
 

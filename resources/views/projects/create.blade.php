@@ -9,12 +9,12 @@
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-5">
 
             <div class="row">
-                <div class="col-lg-12 margin-tb">
-                    <div class="pull-left">
-                        <h2>Add New Product</h2>
+                <div class="col-lg-12 d-flex ">
+                    <div class="mr-auto p-2">
+                        <h2>New Product</h2>
                     </div>
                     <div class="pull-right">
-                        <a class="btn btn-primary" href="{{ route('projects.index') }}" title="Go back"> CANCEL </a>
+                        <a class="btn btn-dark" href="{{ route('projects.index') }}" title="Cancel">CANCEL</a>
                     </div>
                 </div>
             </div>
@@ -29,9 +29,9 @@
                     </ul>
                 </div>
             @endif
+
             <form action="{{ route('projects.store') }}" method="POST" >
                 @csrf
-
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
@@ -63,6 +63,8 @@
                     </div>
                 </div>
             </form>
+
         </div>
     </div>
+</div>
 @endsection
