@@ -11,10 +11,10 @@
             <div class="row">
                 <div class="col-lg-12 d-flex ">
                     <div class="mr-auto p-2">
-                        <h2>New Product</h2>
+                        <h2>New Project</h2>
                     </div>
                     <div class="pull-right">
-                        <a class="btn btn-dark" href="{{ route('projects.index') }}" title="Cancel">CANCEL</a>
+                        <a class="btn btn-dark" href="{{ route('projects.index') }}" title="Cancel">Cancel</a>
                     </div>
                 </div>
             </div>
@@ -30,35 +30,38 @@
                 </div>
             @endif
 
-            <form action="{{ route('projects.store') }}" method="POST" >
+            <hr class="m-5">
+
+            <form action="{{ route('projects.store') }}" method="POST">
                 @csrf
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="mb-3 col-6">
                         <div class="form-group">
-                            <strong>Name:</strong>
-                            <input type="text" name="name" class="form-control" placeholder="Name">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="Name" required>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="mb-3 col-6">
                         <div class="form-group">
-                            <strong>Introduction:</strong>
-                            <textarea class="form-control" style="height:50px" name="introduction"
-                                placeholder="Introduction"></textarea>
+                            <label for="cost">Cost</label>
+                            <input type="number" name="cost" class="form-control" placeholder="Cost" required>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Location:</strong>
-                            <input type="text" name="location" class="form-control" placeholder="Location">
-                        </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" name="location" class="form-control" placeholder="Location" required>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Cost:</strong>
-                            <input type="number" name="cost" class="form-control" placeholder="Cost">
-                        </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-group">
+                        <label for="introduction">Introduction</label>
+                        <textarea class="form-control" style="height:50px" name="introduction" placeholder="Introduction" required></textarea>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                </div>
+                <div class="row">
+                    <div class="d-flex justify-content-end">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>

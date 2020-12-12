@@ -14,7 +14,7 @@
                         <h2>Projetcts List</h2>
                     </div>
                     <div class="p-2">
-                        <a class="btn btn-dark" href="{{ route('projects.create') }}" title="Create a project">NEW</a>
+                        <a class="btn btn-dark" href="{{ route('projects.create') }}" title="Create a project">New</a>
                     </div>
                 </div>
             </div>
@@ -24,6 +24,8 @@
                     <p>{{ $message }}</p>
                 </div>
             @endif
+
+            <hr class="m-5">
 
             <table class="table table-bordered table-responsive-lg">
                 <tr>
