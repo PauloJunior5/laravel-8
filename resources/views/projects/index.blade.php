@@ -27,7 +27,6 @@
 
             <table class="table table-bordered table-responsive-lg">
                 <tr>
-                    <th>Id</th>
                     <th>Name</th>
                     <th>Introduction</th>
                     <th>Location</th>
@@ -37,7 +36,6 @@
                 </tr>
                 @foreach ($projects as $project)
                     <tr>
-                        <td>{{ $project->id }}</td>
                         <td>{{ $project->name }}</td>
                         <td>{{ $project->introduction }}</td>
                         <td>{{ $project->location }}</td>
