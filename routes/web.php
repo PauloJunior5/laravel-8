@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CountriesController;
 use App\Http\Controllers\ProjectsController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,5 +26,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     })->name('dashboard');
 
     Route::resource('projects', ProjectsController::class);
+
+    Route::resource('countries', CountriesController::class);
 
 });
