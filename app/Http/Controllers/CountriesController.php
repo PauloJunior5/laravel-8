@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
 use Illuminate\Http\Request;
 
 class CountriesController extends Controller
@@ -13,7 +14,8 @@ class CountriesController extends Controller
      */
     public function index()
     {
-        //
+        $countries = Country::latest()->paginate('5');
+        return view('countries.index', compact('countries'));
     }
 
     /**
